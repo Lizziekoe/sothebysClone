@@ -1,0 +1,12 @@
+<h1>Lots</h1>
+
+<ul>
+  {{#each}}
+    <li>{{#link-to 'lot' this.id}}{{name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+
+<p><a href="#" {{action 'sortByName'}}>Sort by Name</a></p>
+
+<p>{{#link-to 'new-lot' classNames="btn btn-primary"}}New Lot{{/link-to}}</p>
