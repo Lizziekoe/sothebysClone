@@ -6,5 +6,5 @@ Sothebys.Lot = DS.Model.extend({
   backStory: DS.attr(),
   yearAcquired: DS.attr(),
   image: DS.attr(),
-  product: DS.belongsTo('lot', {async: true})
+  lot: DS.belongsTo('lot', {async: true})
 });
