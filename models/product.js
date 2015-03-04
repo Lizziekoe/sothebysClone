@@ -1,4 +1,4 @@
-Sothebys.Lot = DS.Model.extend({
+Sothebys.Product = DS.Model.extend({
   description: DS.attr(),
   owner: DS.attr(),
   bidNumber: DS.attr(),
