@@ -5,3 +5,8 @@ body {
 ul{
   list-style: none;
 }
+
+img{
+  height: 25%;
+  width: 25%;
+}
