@@ -1,0 +1,14 @@
+<form>
+  <div class="form-group">
+    {{input value=description id="description" classNames="form-control" placeholder="Description"}}
+    {{input value=owner id="owner" classNames="form-control" placeholder="Owner"}}
+    {{input value=bidNumber id="bidNumber" classNames="form-control" placeholder="Bid Number"}}
+    {{input value=startPrice id="startPrice" classNames="form-control" placeholder="Starting Price"}}
+    {{input value=backStory id="backStory" classNames="form-control" placeholder="Back Story"}}
+    {{input value=yearAcquired id="yearAcquired" classNames="form-control" placeholder="Year Acquired"}}
+    {{input value=image id="image" classNames="form-control" placeholder="Image URL"}}
+
+
+  </div>
+  <button class="btn btn-warning" {{action "save"}}>Add Product</button>
+</form>

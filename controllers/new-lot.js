@@ -6,7 +6,6 @@ Sothebys.NewLotController = Ember.Controller.extend({
       });
 
       newLot.save();
-      this.set('lot', "");
       this.transitionToRoute('lots');
     }
   }

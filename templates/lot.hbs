@@ -1,0 +1,15 @@
+<h1>{{name}}</h1>
+
+  <ul>
+    {{#each product in products}}
+    <li><img {{bind-attr src=product.image}} style="width:100px;length:80px"></li>
+    <li><h5> {{#link-to 'show-product'}} {{product.description}} {{/link-to}} </h5></li>
+    {{/each}}
+  </ul>
+
+
+ <h2>Add A Product</h2>
+
+<p>{{#link-to 'new-product' classNames="btn btn-primary"}}New Product{{/link-to}}</p>
+
+{{outlet}}
