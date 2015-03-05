@@ -21,6 +21,12 @@ Sothebys.LotController = Ember.ObjectController.extend({
         lot.save();
       });
       this.set('isAdding', false)
+    },
+    delete: function() {
+      if (confirm('Are you sure?')) {
+      this.get('model').destroyRecord();
+      this.transitionToRoute('lots');
+      }
     }
   }
 });
