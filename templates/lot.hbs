@@ -1,15 +1,38 @@
-<h1>{{name}}</h1>
-
-  <ul>
-    {{#each product in products}}
-    <li><img {{bind-attr src=product.image}} style="width:100px;length:80px"></li>
-    <li><h5> {{#link-to 'show-product'}} {{product.description}} {{/link-to}} </h5></li>
-    {{/each}}
-  </ul>
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6">
 
 
- <h2>Add A Product</h2>
+  <h1>{{name}}</h1>
 
-<p>{{#link-to 'new-product' classNames="btn btn-primary"}}New Product{{/link-to}}</p>
+    <ul>
+      {{#each product in products}}
+      <li><img {{bind-attr src=product.image}} style="width:250px;length:100px"></li>
+      <li><h5> {{#link-to 'show-product' product}} {{product.description}} {{/link-to}} </h5></li>
+      {{/each}}
+    </ul>
+  </div>
+ <div class="col-lg-6 col-md-6 col-sm-6">
+  {{outlet}}
+ </div>
 
-{{outlet}}
+</div>
+<div class="row">
+
+{{#if isAdding}}
+  <h2>Add A Product</h2>
+  <form>
+    <div class="form-group">
+      {{input value=description id="description" classNames="form-control" placeholder="Name"}}
+      {{input value=owner id="owner" classNames="form-control" placeholder="Owner"}}
+      {{input value=bidNumber id="bidNumber" classNames="form-control" placeholder="Bid Number"}}
+      {{input value=startPrice id="startPrice" classNames="form-control" placeholder="Starting Price"}}
+      {{input value=backStory id="backStory" classNames="form-control" placeholder="Back Story"}}
+      {{input value=yearAcquired id="yearAcquired" classNames="form-control" placeholder="Year Acquired"}}
+      {{input value=image id="image" classNames="form-control" placeholder="Image URL"}}
+    </div>
+    <button class="btn btn-warning" {{action "save"}}>Add Product</button>
+  </form>
+{{else}}
+  <button class="btn btn-primary" {{action 'add'}}>New Product</button>
+{{/if}}
+</div>
