@@ -20,7 +20,6 @@ Sothebys.LotController = Ember.ObjectController.extend({
         product.save();
         lot.save();
       });
-
       this.set('isAdding', false)
     }
   }

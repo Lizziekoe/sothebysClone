@@ -1,6 +1,12 @@
+{{#if isDeleted}}
+
+{{else}}
+
 <h2>{{description}}</h2>
 <h4>{{owner}}</h4>
 <h4>{{bidNumber}}</h4>
 <h4>{{startPrice}}</h4>
 <h4>{{backStory}}</h4>
 <h4>{{yearAcquired}}</h4>
+<button class="btn btn-primary" {{action 'delete' product}}>Delete</button>
+{{/if}}
