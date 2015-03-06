@@ -7,6 +7,7 @@ Installation and Usage
 ------------
 To run the app simply clone this repository and in your terminal run
 `$ python -m SimpleHTTPServer`go to `localhost:8000`.
+view site here: http://lizziekoe.github.io/sothebysClone/
 
 Motivation
 --------
